@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Contoh Program Javascript</title>
+</head>
+<body>
+    <!-- Contoh If pada program Javascript -->
+    <script>
+        var totalBelanja = prompt("Total Pembelian?", 0);
+
+        if(totalBelanja > 100000){
+            document.write("<h2>Selamat Anda dapat potongan harga 20% </h2>");
+        }
+
+        document.write("<p>Terimakasih sudah berbelanja di toko kami</p>");
+    </script>
+    <!-- Contoh IF ELSE pada program Javascript -->
+    <script>
+        var password = prompt("Password:");
+
+        if(password == "kuemanis"){
+            document.write("<h2>Selamat datang pelanggan berbahagia..</h2>");
+        } else {
+            document.write("<p>Password salah, coba lagi!</p>");
+        }
+
+        document.write("<p>Terima kasih sudah berbelanja menggunakkan aplikasi ini! </p>");
+
+    </script>
+    <!-- Contoh Program Nested IF pada program Javascript -->
+    <script>
+        var username = prompt("Username:");
+        var password = prompt("Password:");
+
+        if(username == "amartya"){
+            if(password == "baik"){
+                document.write("<h2>Selamat datang pak bos!</h2>");
+            } else {
+                document.write("<p>Password salah, coba lagi!</p>");
+            }
+        } else {
+            document.write("<p>Anda tidak terdaftar!</p>");
+        }
+    </script>
+    <!-- Contoh Program Switch Case pada program Javascript -->
+    <div id="hasil"></div>
+ 	<script>
+			var warna = "hitam";
+ 		switch (warna){
+			case "hitam":
+				teks = "warna hitam";
+				break;
+			case "merah":
+				teks = "Warna merah";
+				break;
+			case "hijau":
+				teks = "Warna hijau";
+				break;
+			default:
+			    teks = "Warna tidak terdeteksi";
+		}		
+				document.getElementById("hasil").innerHTML = teks;
+	</script>
+    <!-- Contoh Program For Statement pada program Javascript -->
+    <script>
+        for(let i = 0; i < 3; i++){
+            document.write("<p>Perulangan ke-" + i + "</p>")
+        }
+    </script>
+    <!-- Contoh Program While pada program Javascript -->
+    <script>
+        var ulangi = confirm("Berapa kali anda ingin mencoba mengulang?");
+        var counter = 0;
+        
+        while(ulangi){
+            counter++;
+            ulangi = confirm("Apakah anda mau mengulang?");
+        }
+        
+        document.write("Perulangan sudah dilakukan sebanyak "+ counter +" kali");
+    </script>
+    <br>
+     <!-- Contoh Program DO While pada program Javascript -->
+     <script>
+        var ulangi = confirm("Apakah anda mau mengulang?");;
+        var counter = 0;
+        
+        do {
+            counter++;
+            ulangi = confirm("Berapa kali anda ingin mencoba mengulang?");
+        } while(ulangi)
+        
+        document.write("Perulangan sudah dilakukan sebanyak "+ counter +" kali");
+    </script>
+</body>
+<br>
+<br>
+<br>
+<body>
+            
+    <fieldset>
+        <legend>Input Data Kue</legend>
+        <input type="text" name="barang" placeholder="input nama kue..." />
+        <input type="button" onclick="addBarang()" value="Tambah" />
+    </fieldset>
+
+    <div>
+        <ul id="list-kue">
+        </ul>
+    </div>
+
+    <script src="fungsi.js"></script>
+</body>
+</html>
